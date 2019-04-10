@@ -1,0 +1,15 @@
+extends ./common/html.pug
+
+mixin article(title)
+    .article
+        .article-wrapper
+            h1= title
+mixin link(href, name)
+    //- attributes == {class: "btn"}
+    a(class!=attributes.class href=href)= name
+
+block content
+    +article('Hello world')
+
+    +article('Hello world222')
+    +link('/foo', 'foo')(class="btn")

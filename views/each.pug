@@ -1,0 +1,22 @@
+extends ./common/html.pug
+
+block content
+    ul
+        each val,index in [1,2,3]
+            li= index + ":" + val
+    - var values = [];
+    ul
+        each val in values.length ? values : ['没有内容']
+            li= val
+    - var values = [];
+    ul
+        each val in values
+            li= val
+        else
+            li 没有内容
+    
+    //- while迭代
+    - var n = 0;
+    ul
+        while n < 4
+            li= n++
